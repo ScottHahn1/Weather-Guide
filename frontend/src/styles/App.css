@@ -1,0 +1,279 @@
+:root {
+    --black: rgb(24, 23, 23);
+}
+
+* {
+    list-style: none;
+    text-decoration: none;
+}
+
+html {
+    background: linear-gradient(to bottom, darkblue, dodgerblue);
+    background-repeat: no-repeat;
+    min-height: 100vh;
+}
+
+.app {
+    box-sizing: border-box;
+    height: 100%;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    transition: top .3s;
+    z-index: 1;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.heading {
+    background-color: var(--black);
+    display: flex;
+    justify-content: center;
+    gap: 15%;
+}
+
+.mobile-menu {
+    display: none;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    color: var(--white);
+    font-family: PoppinsRegular;
+    padding-top: 10rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+h1 {
+    font-family: sans-serif;
+    font-size: 2.5rem;
+    color: white;
+    cursor: pointer;
+}
+
+h2 {
+    color: white;
+    font-family: MontserratRegular;
+    font-size: 2rem;
+    padding-top: 2rem;
+}
+
+h3 {
+    padding-left: 2rem;
+}
+
+a {
+    color: black;
+}
+
+button {
+    cursor: pointer;
+}
+
+.hidden {
+    display: none;
+}
+
+.show-block {
+    display: block;
+}
+
+.flex {
+    display: flex;
+    justify-content: space-between;
+}
+
+.flex-span {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.weather {
+    width: 70%;
+    background-color: var(--black);
+    align-items: center;
+    justify-content: center;
+    border-radius: 2rem;
+    margin: 3rem auto;
+    color: white;
+    animation: fade-in 2s;
+}
+
+.collapse {
+    display: grid;
+    grid-template-columns: repeat(4, 25%);
+    grid-column: 1 / span 5;
+    justify-content: space-around;
+    text-align: center;
+}
+
+.loading {
+    border: 5px solid #f3f3f3; 
+    border-radius: 50%;
+    width: 5rem;
+    height: 5rem;
+    animation: spin 2s linear infinite;
+    margin: 2rem auto;
+}
+
+.units {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 12%;
+}
+
+.units button {
+    font-size: 1.3rem;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    min-height: 50%;
+    width: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid lightblue;
+    border-radius: 50%;
+    background-color: lightblue;
+}
+
+.line {
+    min-height: 80%;
+    background-color: white;
+    width: .1rem;
+}
+
+.units button:hover {
+    background-color: rgb(4, 86, 141);
+    color: white;
+    border: 1px solid black;
+    transition: ease-in-out .7s;
+}
+
+.no-page-found {
+    display: flex;
+    justify-content: center;
+    margin-top: 5rem;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg) }
+    100% { transform: rotate(360deg) }
+}
+
+@keyframes fade-in {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+@font-face {
+    font-family: "MontserratRegular";
+    src: local("MontserratRegular"),
+    url("../assets/fonts/Montserrat-Regular.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "PoppinsRegular";
+    src: local("PoppinsRegular"),
+    url("../assets/fonts/Poppins-Regular.ttf") format("truetype");
+}
+
+@media screen and (max-width: 600px) {
+    .heading {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: black;
+        border-bottom: 2px solid white;
+    }
+
+    h1 {
+        color: white;
+        text-shadow: 2px 2px black;
+        font-size: 2rem;
+        align-self: flex-start;
+        margin-left: 1rem;
+    }
+
+    h3 {
+        padding: 0;
+    }
+
+    .units {
+        width: 30%;
+        padding-bottom: 1rem;
+        border-radius: 2rem;
+    }
+
+    .units button {
+        font-size: 1.2rem;
+        min-height: 2rem;
+        width: 2rem;
+    }
+
+    .weather {
+        background-color: black;
+        color: white;
+        width: 90%;
+        border-radius: 0;
+        font-size: .8rem;
+    }
+
+    .weather-icon {
+        width: 3rem;
+        justify-content: space-between;
+    }
+}
+
+@media screen and (min-width: 601px) and (max-width: 1250px) {
+    .heading {
+        justify-content: space-around;
+        gap: 0;
+    }
+
+    h1 {
+        color: white;
+        text-shadow: 2px 2px black;
+        font-size: 2rem;
+        align-self: flex-start;
+    }
+
+    .weather {
+        background-color: black;
+        color: white;
+        width: 80%;
+        border-radius: 0;
+    }
+}
+
+@media screen and (min-width: 1800px) {
+    .app {
+        font-size: 1.5rem;
+    }
+
+    h1 {
+        font-size: 3rem;
+    }
+
+    h2 {
+        font-size: 2.5rem;
+    }
+
+    .heading {
+        gap: 0;
+        justify-content: space-around;
+    }
+
+    .loading {
+        margin-top: 5rem;
+        width: 8rem;
+        height: 8rem;
+    }
+}
