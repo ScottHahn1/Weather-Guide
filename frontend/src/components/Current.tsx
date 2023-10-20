@@ -6,7 +6,7 @@ import { useContext, useEffect } from 'react';
 import { UnitsContext } from '../contexts/UnitsContext';
 
 const Current = () => {
-    const { location, weather, loading, error } = useSetWeather<CurrentData>('/.netlify/api/weather/onecall', 'hourly, daily, minutely');
+    const { location, weather, loading, error } = useSetWeather<CurrentData>('/.netlify/functions/server/weather/onecall', 'hourly, daily, minutely');
 
     const unitsContext = useContext(UnitsContext);
 

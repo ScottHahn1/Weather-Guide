@@ -11,6 +11,6 @@ const app: Express = express();
 app.use(cors());
 app.use(express.json());
 
-app.use('/.netlify/api/functions/weather', router);
+app.use('/.netlify/functions/server/weather', router);
 
 export const handler = serverless(app); 
