@@ -10,7 +10,7 @@ import '../styles/Daily.css';
 const Daily = () => {
     const [weatherGrouped, setWeatherGrouped] = useState<GroupedData[]>([]);
     const [collapsed, setCollapsed] = useState<number | null>(null);
-    const { location, weather, loading, error } = useSetWeather<DailyData>('/.netlify/api/weather/daily');
+    const { location, weather, loading, error } = useSetWeather<DailyData>('/.netlify/functions/server/weather/daily');
 
     const unitsContext = useContext(UnitsContext);
 
