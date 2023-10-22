@@ -25,7 +25,7 @@ const useSetWeather = <WeatherData>(weatherUrl: string, excluded?: string) => {
     const [locationParams, setLocationParams] = useState<LocationParams>({} as LocationParams);
     const [location, setLocation] = useState<LocationData | []>([]);
     const [weather, setWeather] = useState<WeatherData | []>([]);
-    const locationUrl = '/.netlify/functions/server/weather/location';
+    const locationUrl = 'https://weather-app-z2e6.onrender.com/server/weather/location';
     const [weatherParams, setWeatherParams] = useState<WeatherParams>({} as WeatherParams);
     const [error, setError] = useState(false);
 

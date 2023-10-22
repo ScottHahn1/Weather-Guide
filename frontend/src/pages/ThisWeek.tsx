@@ -9,7 +9,7 @@ import '../styles/ThisWeek.css';
 
 const ThisWeek = () => {
     const [collapsed, setCollapsed] = useState<number | null>(null);
-    const { location, weather, loading, error } = useSetWeather<ThisWeekData>('/.netlify/functions/server/weather/onecall', 'current, hourly, minutely');
+    const { location, weather, loading, error } = useSetWeather<ThisWeekData>('https://weather-app-z2e6.onrender.com/server/weather/onecall', 'current, hourly, minutely');
     
     const unitsContext = useContext(UnitsContext);
 
