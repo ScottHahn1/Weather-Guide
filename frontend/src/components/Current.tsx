@@ -6,7 +6,7 @@ import { useContext, useEffect } from 'react';
 import { UnitsContext } from '../contexts/UnitsContext';
 
 const Current = () => {
-    const { location, weather, loading, error } = useSetWeather<CurrentData>('https://weather-app-z2e6.onrender.com/server/weather/onecall', 'hourly, daily, minutely');
+    const { location, weather, loading, error } = useSetWeather<CurrentData>('https://weather-app-f0jt.onrender.com/server/weather/onecall', 'hourly, daily, minutely');
 
     const unitsContext = useContext(UnitsContext);
 
