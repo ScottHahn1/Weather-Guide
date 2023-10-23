@@ -38,7 +38,7 @@ router.get('/onecall', async (req, res) => {
 router.get('/daily', async (req, res) => {
   if (req.query.lat && req.query.lon) {
     const { lat, lon, units } = req.query;
-    const url = `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&units=${units}&appid=${process.env.API_KEY}`;
+    const url = `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&units=${units}&appid=${process.env.REACT_APP_API_KEY}`;
     const response = await axios.get(url);
 
     try {
@@ -48,7 +48,5 @@ router.get('/daily', async (req, res) => {
     }
   }
 })
-
-module.exports = router;
 
 export default router;
