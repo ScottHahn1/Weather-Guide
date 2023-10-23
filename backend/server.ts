@@ -13,4 +13,6 @@ app.use(express.json());
 
 app.use('https://weather-app-z2e6.onrender.com/server/weather', router);
 
+app.listen(process.env.PORT);
+
 export const handler = serverless(app); 
