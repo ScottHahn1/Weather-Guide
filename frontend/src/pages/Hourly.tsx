@@ -9,7 +9,7 @@ import { UnitsContext } from '../contexts/UnitsContext';
 
 const Hourly = () => {
     const [collapsed, setCollapsed] = useState<number | null>(null);
-    const { location, weather, loading, error } = useSetWeather<HourlyData>('https://weather-app-z2e6.onrender.com/server/weather/onecall', 'current, daily, minutely');
+    const { location, weather, loading, error } = useSetWeather<HourlyData>('https://weather-app-f0jt.onrender.com/server/weather/onecall', 'current, daily, minutely');
     
     const unitsContext = useContext(UnitsContext);
 
