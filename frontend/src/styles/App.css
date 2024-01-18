@@ -117,6 +117,7 @@ button {
 
 .loading {
     border: 5px solid #f3f3f3; 
+    border-top-color: black;
     border-radius: 50%;
     width: 5rem;
     height: 5rem;
