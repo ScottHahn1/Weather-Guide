@@ -6,12 +6,11 @@ import router from './routes/weatherRoutes';
 dotenv.config();
 
 const app: Express = express();
+const port = process.env.PORT || 7777;
 
-app.use(cors());
 app.use(express.json());
+app.use(cors());
 
 app.use('/server/weather', router);
-
-const port = process.env.PORT || 7777
 
 app.listen(port, () => console.log('Server running...'));
