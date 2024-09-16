@@ -24,7 +24,7 @@ router.get('/location', async (req, res) => {
 router.get('/onecall', async (req, res) => {
   if (req.query.lat && req.query.lon) {
     const { lat, lon, exclude, units } = req.query;
-    const url = `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&exclude=${exclude}&units=${units}&appid=${process.env.REACT_APP_API_KEY}`;
+    const url = `https://api.openweathermap.org/data/3.0/onecall?lat=${lat}&lon=${lon}&exclude=${exclude}&units=${units}&appid=${process.env.REACT_APP_API_KEY}`;
     const response = await axios.get(url);
 
     try {
