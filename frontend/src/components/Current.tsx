@@ -10,6 +10,8 @@ const Current = () => {
 
     const unitsContext = useContext(UnitsContext);
 
+    console.log(location, weather);
+
     return (
         <div className={!loading ? 'container' : 'container-loading'}>
             {!Array.isArray(weather) && !Array.isArray(location) && (
