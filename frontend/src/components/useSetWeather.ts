@@ -34,7 +34,9 @@ const useSetWeather = <WeatherData>(weatherUrl: string, excluded?: string) => {
 
     const { data: locationData, error: locationError } = useAxios<LocationData[]>(locationUrl, [], locationParams);
     const { data: weatherData, loading, error: weahterError } = useAxios<WeatherData[]>(weatherUrl, [], weatherParams);
-
+    
+    console.log(weatherData);
+    
     useEffect(() => {
         if (locationContext && locationContext.searchLocation) {
             setLocationParams({ location: locationContext.searchLocation });
