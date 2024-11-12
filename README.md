@@ -5,8 +5,8 @@ Weather Guide is a modern, user-friendly weather application that provides accur
 
 ## Features
 
-- **Current Weather**: Displays the current weather conditions, including temperature, humidity, wind speed, and more.
-- **Today**: Provides weather data the current day.
+- **Current Weather**: Displays the current weather.
+- **Today's Forecast**: Provides weather data for the current day including temperature, humidity, wind speed, and more.
 - **Hourly Forecast**: Provides detailed weather data for each hour throughout the day.
 - **Daily Forecast**: Shows the forecast for the next few days with additional details like temperature, chance of precipitation, and wind speed.
 - **Next 7 Days**: Gives users a 7-day weather forecast, helping them plan ahead.
